@@ -1,0 +1,5 @@
+# Разрешаем поисковикам (Google, Yandex) читать весь сайт
+User-agent: *
+Allow: /
+
+Sitemap: https://saku-beauty-final.vercel.app/sitemap.xml
