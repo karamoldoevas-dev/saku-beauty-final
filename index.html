@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#fbf6ef" />
+    <title>SAKU BEAUTY</title>
+    <script>
+      // Ставим тему устройства (день/ночь) ещё до загрузки React, чтобы ночью не было белой вспышки
+      try {
+        var th = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = th
+        document.querySelector('meta[name="theme-color"]').content = th === 'dark' ? '#150b10' : '#fbf6ef'
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
